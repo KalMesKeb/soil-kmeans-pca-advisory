@@ -54,7 +54,7 @@ pip install numpy pandas scikit-learn matplotlib seaborn
 ```bash
 git clone [https://github.com/your-username/ethio-soil-precision-ml.git](https://github.com/your-username/ethio-soil-precision-ml.git)
 cd ethio-soil-precision-ml
-python main.py
+python K-Means Soil Data Model.ipynb
 ```
 
 ---
@@ -83,9 +83,5 @@ Raw Telemetry Metrics -> N: 412.0 | P: 542.1 | K: 610.2 | pH: 8.42 | EC: 12450.6
 
 ## ⚠️ Algorithmic Limitations & Next Steps
 * **Outlier Gravitation:** Because K-Means minimizes squared Euclidean distances, extreme salinity points ($\approx 16,000\ \mu\text{S/cm}$) exert a heavy mathematical pull on moving centroids, biasing the algorithm to act primarily as an anomaly quarantine system.
-* **Future Work:** Migrating from K-Means to density-based spatial clustering (**DBSCAN**) to isolate hyper-saline anomalies natively as noise points, and expanding feature vectors to ingest geospatial and environmental parameters (elevation, slope, and mean rainfall).
+* **Future Work:** Migrating from K-Means to density-based spatial clustering (**DBSCAN**) to isolate hyper-saline anomalies natively as noise points, and expanding feature vectors to ingest geospatial, locational, and environmental parameters (elevation, slope, and mean rainfall).
 
----
-
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
